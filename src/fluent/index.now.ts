@@ -29,3 +29,27 @@ BusinessRule({
 	// Logic goes here
 })(current, previous);`,
 })
+
+// 🔥 AI Generated Script
+ClientScript({
+    $id: Now.ID['incident_state_change_alert'],
+    name: 'Incident State Change Alert',
+    table: 'incident',
+    active: true,
+    appliesExtended: false,
+    global: true,
+    uiType: 'all',
+    messages: '',
+    description: 'Alert user when incident state changes',
+    isolateScript: false,
+    type: 'onChange',
+    fieldName: 'state',
+    script: `
+    function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+        if (isLoading || newValue === '' || newValue === oldValue) {
+            return;
+        }
+        alert('You are changing the state of the incident');
+    }
+    `,
+})
