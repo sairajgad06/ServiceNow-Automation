@@ -4,12 +4,15 @@
 import { ClientScript } from '@servicenow/sdk/core';
 
 export default ClientScript({
+    $id: Now.ID['srg_onload_client'],
     name: 'Show Welcome Message on Incident',
     table: 'incident',
     type: 'onLoad',
     ui_type: 'all',
     active: true,
-    script: (g_form, g_user) => {
-        g_form.addInfoMessage('Welcome to the Incident form!');
-    }
+    script: `
+function onLoad() {
+    g_form.addInfoMessage('Welcome to the Incident form!');
+}
+`,
 });
