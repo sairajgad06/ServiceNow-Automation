@@ -9,6 +9,10 @@ declare global {
                         table: 'sys_module'
                         id: 'f4aa9484c4a941b99fce777746497782'
                     }
+                    incident_state_change_alert: {
+                        table: 'sys_script_client'
+                        id: '074daf69c8fb48ec97ed7f2f92671238'
+                    }
                     package_json: {
                         table: 'sys_module'
                         id: '292d22334ff3458d9e467927c4523046'
@@ -16,6 +20,10 @@ declare global {
                     srg_onload_client: {
                         table: 'sys_script_client'
                         id: '602f8fab6ce940fdaee491353b14ab4d'
+                    }
+                    srg_testing_br: {
+                        table: 'sys_script'
+                        id: 'a2077aef4b924cf6a0d9cc87741b0883'
                     }
                 }
                 composite: [
