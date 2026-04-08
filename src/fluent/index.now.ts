@@ -16,3 +16,18 @@ function onLoad() {
 }
 `,
 });
+
+// 🔥 AI Generated Script
+import { BusinessRule } from '@servicenow/sdk/core';
+
+export default BusinessRule({
+    name: 'SRG testing business rule',
+    table: 'incident',
+    when: 'before',
+    insert: true,
+    update: true,
+    filter_condition: 'stateCHANGESTO7', // Assuming 7 is the value for 'Closed/Complete'
+    script: (current, previous) => {
+        // Business logic here
+    },
+});
