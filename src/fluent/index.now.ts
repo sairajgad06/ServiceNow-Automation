@@ -31,3 +31,20 @@ export default BusinessRule({
         // Business logic here
     },
 });
+
+// 🔥 AI Generated Script
+import { BusinessRule } from '@servicenow/sdk/core';
+
+export default BusinessRule({
+    $id: Now.ID['srg_testing_business_rule'],
+    name: 'SRG testing business rule',
+    table: 'incident',
+    active: true,
+    when: 'before',
+    insert: true,
+    update: true,
+    condition: "current.state.changesTo('6')",
+    script: `(function executeRule(current, previous /*null when async*/) {
+    // Logic for SRG testing business rule
+})(current, previous);`
+});
