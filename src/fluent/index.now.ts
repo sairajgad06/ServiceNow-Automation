@@ -1,10 +1,6 @@
 
-
 // 🔥 AI Generated Script
-
-
-// 🔥 AI Generated Script
-import { ClientScript } from '@servicenow/sdk/core';
+import { ClientScript, BusinessRule} from '@servicenow/sdk/core';
 
 export default ClientScript({
     $id: Now.ID['srg_onload_client'],
