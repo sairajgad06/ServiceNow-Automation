@@ -43,7 +43,7 @@ ClientScript({
     description: 'Alert user when incident state changes',
     isolateScript: false,
     type: 'onChange',
-    fieldName: 'state',
+    field: 'state',
     script: `
     function onChange(control, oldValue, newValue, isLoading, isTemplate) {
         if (isLoading || newValue === '' || newValue === oldValue) {
