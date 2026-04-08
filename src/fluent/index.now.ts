@@ -53,3 +53,17 @@ ClientScript({
     }
     `,
 })
+
+// 🔥 AI Generated Script
+UIAction({
+  $id: Now.ID['incident_test_button'],
+  name: 'test button',
+  table: 'incident',
+  active: true,
+  formButton: true,
+  client: true,
+  onClick: 'onTestButtonClick()',
+  script: `function onTestButtonClick() {
+    alert('Test button clicked on incident');
+}`,
+})
