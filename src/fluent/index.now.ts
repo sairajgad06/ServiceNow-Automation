@@ -1,6 +1,6 @@
 
 // 🔥 AI Generated Script
-import { ClientScript, BusinessRule} from '@servicenow/sdk/core';
+import { ClientScript, BusinessRule, UiAction} from '@servicenow/sdk/core';
 
 export default ClientScript({
     $id: Now.ID['srg_onload_client'],
@@ -55,15 +55,25 @@ ClientScript({
 })
 
 // 🔥 AI Generated Script
-UIAction({
+UiAction({
   $id: Now.ID['incident_test_button'],
   name: 'test button',
   table: 'incident',
   active: true,
-  formButton: true,
-  client: true,
-  onClick: 'onTestButtonClick()',
+  roles: ['admin'],
+  form: {
+    showButton: true,
+    showLink: true,
+    showContextMenu: false,
+    style: 'destructive',
+},
+client: {
+    isClient: true,
+    isUi11Compatible: true,
+    isUi16Compatible: true,
+    onClick: 'onTestButtonClick()'
+  },
   script: `function onTestButtonClick() {
     alert('Test button clicked on incident');
-}`,
+    }`,
 })
