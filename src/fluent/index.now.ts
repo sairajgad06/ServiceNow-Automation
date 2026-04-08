@@ -48,3 +48,16 @@ export default BusinessRule({
     // Logic for SRG testing business rule
 })(current, previous);`
 });
+
+// 🔥 AI Generated Script
+BusinessRule({
+    $id: Now.ID['srg_testing_br'],
+    name: 'SRG testing business rule',
+    table: 'incident',
+    when: 'before',
+    action: ['insert', 'update'],
+    filterCondition: 'stateCHANGESTO7',
+    script: `(function executeRule(current, previous /*null when async*/) {
+	// Logic goes here
+})(current, previous);`,
+})
