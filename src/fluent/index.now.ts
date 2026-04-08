@@ -1,1 +1,9 @@
-//Add your Fluent APIs here and in other now.ts files under src/fluent
+
+import './client-scripts';
+import './business-rules';
+import './generated';
+
+// Sample export (optional)
+export const init = () => {
+console.log('Fluent App Initialized');
+};
