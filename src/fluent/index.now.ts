@@ -77,3 +77,31 @@ client: {
     alert('Test button clicked on incident');
     }`,
 })
+
+// 🔥 AI Generated Script
+ClientScript({
+    $id: Now.ID['validate_dates_record_producer'],
+    name: 'Validate End Date After Start Date',
+    table: 'incident',
+    active: true,
+    appliesExtended: false,
+    global: true,
+    uiType: 'all',
+    messages: '',
+    description: 'Prevents submission if the end date is earlier than the start date.',
+    isolateScript: false,
+    type: 'onSubmit',
+    script: `
+    function onSubmit() {
+        var startDate = g_form.getValue('start_date');
+        var endDate = g_form.getValue('end_date');
+
+        if (startDate !== '' && endDate !== '') {
+            if (endDate < startDate) {
+                g_form.addErrorMessage('End date cannot be before start date.');
+                return false;
+            }
+        }
+    }
+    `,
+})
