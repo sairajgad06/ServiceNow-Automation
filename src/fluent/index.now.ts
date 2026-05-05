@@ -105,3 +105,25 @@ ClientScript({
     }
     `,
 })
+
+// 🔥 AI Generated Script
+ClientScript({
+    $id: Now.ID['incident_priority_1_info'],
+    name: 'Show Info Message on P1',
+    table: 'incident',
+    active: true,
+    appliesExtended: false,
+    global: true,
+    uiType: 'all',
+    messages: '',
+    description: 'Displays an info message if the priority is 1 on form load',
+    isolateScript: false,
+    type: 'onLoad',
+    script: `
+        function onLoad() {
+            if (g_form.getValue('priority') == '1') {
+                g_form.addInfoMessage('This is a Priority 1 incident.');
+            }
+        }
+    `,
+})
